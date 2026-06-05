@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip - Travel Agency</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-suitcase-rolling brand-icon"></i>My Trip</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item "><a class="nav-link " href="#">Home</a></li>
+                    <li class="nav-item "><a class="nav-link " href="#">Tours</a></li>
+                    <li class="nav-item "><a class="nav-link " href="#">Destinations</a></li>
+                    <li class="nav-item "><a class="nav-link " href="#">Pages</a></li>
+                    <li class="nav-item "><a class="nav-link " href="#">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="logout()">Lgout</a></li>
+                </ul>
+                <div class="d-flex gap-3 align-items-center">
+                    <button class="btn btn-destination" id="userBtn">
+                        <i class="fas fa-user-circle me-2"></i>
+                        Guest
+                    </button>
+                    <button
+                        class="menu-toggle d-none d-lg-none"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="flying-element plane-1"><i class="fas fa-plane"></i></div>
+        <div class="flying-element plane-2"><i class="fas fa-plane"></i></div>
+        <div class="flying-element balloon"><i class="fas fa-hot-air-balloon"></i></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title-small">Explore The</h1>
+                <h1 class="hero-title-large">Beauty Of Worlds</h1>
+                <p class="hero-subtitle">More then <span class="badge-count">10,300+</span> most popular destinations
+                    package</p>
+            </div>
+        </div>
+        <div class="landmarks">
+            <div class="landmark">🕌</div>
+            <div class="landmark">🏛️</div>
+            <div class="landmark">🗼</div>
+            <div class="landmark">🏰</div>
+            <div class="landmark">🗽</div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-badge"><i class="fas fa-map-marked-alt"></i><span>Know About Us</span></div>
+                    <h2 class="about-title">Beyond Destinations Our<br>Story, Our Promise</h2>
+                    <p class="about-description">Travel isn't just about destinations — it's about discovery,
+                        connection, and unforgettable experiences. With a passion for exploration and years of industry
+                        expertise, we craft personalized journeys that go beyond tourist trail.</p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-award"></i></div>
+                            <div>
+                                <h4>Award Winning</h4>
+                                <p>Travel Agency</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div>
+                                <h4>Professional &</h4>
+                                <p>Certified</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-learn-more">Learn More Us <i class="fas fa-arrow-right"></i></button>
+                    <div class="founder-info">
+                        <img src="https://i.pravatar.cc/80?img=47" alt="Rosena D. Costa" class="founder-avatar">
+                        <div>
+                            <h5>Rosena D. Costa</h5>
+                            <p>CEO & Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div style="position: relative; padding: 2rem;">
+                        <img src="images/photo-1488646953014-85cb44e25828.jpg?w=800&h=900&fit=crop" alt="Traveler"
+                            class="about-main-image">
+                        <div class="deco-element" style="top: 15%; right: 5%; color: #9c27b0;"><i
+                                class="fas fa-plane"></i></div>
+                        <div class="deco-element" style="bottom: 20%; right: 0%; color: #9c27b0; font-size: 3rem;"><i
+                                class="fas fa-map-marker-alt"></i></div>
+                        <div class="deco-element" style="top: 5%; right: 25%; color: #7cb342;"><i
+                                class="fas fa-hot-air-balloon"></i></div>
+                        <div class="deco-element" style="bottom: 5%; left: 0%; color: #7cb342; font-size: 2rem;"><i
+                                class="fas fa-camera"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-destinations">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-subtitle">Popular Destination</h3>
+                <h2 class="section-title">Discover The Amazing Tours Places<br>Around World, <span
+                        class="highlight-badge">50+</span> Countries</h2>
+            </div>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <div class="card-image"><img src="images/photo-1552465011-b4e21bf6e79a.jpg?w=500&h=600&fit=crop"
+                            alt="Thailand"><span class="tour-badge">10 Tours</span></div>
+                    <div class="card-footer">
+                        <h4>Thailand</h4>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="card-image"><img src="images/photo-1523906834658-6e24ef2386f9.jpg?w=500&h=600&fit=crop"
+                            alt="Italy"><span class="tour-badge">20 Tours</span></div>
+                    <div class="card-footer">
+                        <h4>Italy</h4>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="card-image"><img src="images/photo-1527004013197-933c4bb611b3.jpg?w=500&h=600&fit=crop"
+                            alt="Switzerland"><span class="tour-badge">08 Tours</span></div>
+                    <div class="card-footer">
+                        <h4>Switzerland</h4>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="card-image"><img src="images/photo-1511739001486-6bfe10ce785f.jpg?w=500&h=600&fit=crop"
+                            alt="France"><span class="tour-badge">06 Tours</span></div>
+                    <div class="card-footer">
+                        <h4>France</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-tours-carousel">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="carousel-subtitle">Popular Tours</span>
+                <h2 class="carousel-title">Top Picks for the Ultimate Journey</h2>
+            </div>
+
+            <div id="tourCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="tour-card">
+                                    <div class="tour-img">
+                                        <span class="badge-feature">Features</span>
+                                        <span class="badge-days">3 days - 2 night</span>
+
+                                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="">
+                                    </div>
+
+                                    <div class="tour-content">
+                                        <h4>Pool relaxation garden</h4>
+                                        <p class="meta">📍 Bali, Indonesia <span>⭐ 4.8</span></p>
+
+                                        <div class="price-row">
+                                            <a href="#" class="btn-book">Book Now</a>
+                                            <span class="price">$120</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="tour-card">
+                                    <div class="tour-img">
+                                        <span class="badge-feature">Features</span>
+                                        <span class="badge-days">3 days - 2 night</span>
+
+                                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="">
+                                    </div>
+
+                                    <div class="tour-content">
+                                        <h4>Pool relaxation garden</h4>
+                                        <p class="meta">📍 Bali, Indonesia <span>⭐ 4.8</span></p>
+
+                                        <div class="price-row">
+                                            <a href="#" class="btn-book">Book Now</a>
+                                            <span class="price">$120</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="tour-card">
+                                    <div class="tour-img">
+                                        <span class="badge-feature">Features</span>
+                                        <span class="badge-days">3 days - 2 night</span>
+
+                                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="">
+                                    </div>
+
+                                    <div class="tour-content">
+                                        <h4>Pool relaxation garden</h4>
+                                        <p class="meta">📍 Bali, Indonesia <span>⭐ 4.8</span></p>
+
+                                        <div class="price-row">
+                                            <a href="#" class="btn-book">Book Now</a>
+                                            <span class="price">$120</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="tour-card">
+                                    <div class="tour-img">
+                                        <span class="badge-feature">Features</span>
+                                        <span class="badge-days">3 days - 2 night</span>
+
+                                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="">
+                                    </div>
+
+                                    <div class="tour-content">
+                                        <h4>Pool relaxation garden</h4>
+                                        <p class="meta">📍 Bali, Indonesia <span>⭐ 4.8</span></p>
+
+                                        <div class="price-row">
+                                            <a href="#" class="btn-book">Book Now</a>
+                                            <span class="price">$120</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="tour-card">
+                                    <div class="tour-img">
+                                        <span class="badge-feature">Features</span>
+                                        <span class="badge-days">3 days - 2 night</span>
+
+                                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="">
+                                    </div>
+
+                                    <div class="tour-content">
+                                        <h4>Pool relaxation garden</h4>
+                                        <p class="meta">📍 Bali, Indonesia <span>⭐ 4.8</span></p>
+
+                                        <div class="price-row">
+                                            <a href="#" class="btn-book">Book Now</a>
+                                            <span class="price">$120</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="tour-card">
+                                    <div class="tour-img">
+                                        <span class="badge-feature">Features</span>
+                                        <span class="badge-days">3 days - 2 night</span>
+
+                                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada" alt="">
+                                    </div>
+
+                                    <div class="tour-content">
+                                        <h4>Pool relaxation garden</h4>
+                                        <p class="meta">📍 Bali, Indonesia <span>⭐ 4.8</span></p>
+
+                                        <div class="price-row">
+                                            <a href="#" class="btn-book">Book Now</a>
+                                            <span class="price">$120</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#tourCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#tourCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="tour-guide-section">
+        <div class="container position-relative">
+            <!-- Decorative Elements -->
+            <div class="deco-plane-guide">
+                <i class="fas fa-plane"></i>
+            </div>
+            <div class="deco-balloon-guide">
+                <i class="fas fa-hot-air-balloon"></i>
+            </div>
+            <div class="deco-scroll-guide">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+
+            <div class="guide-header">
+                <h3 class="guide-subtitle">Meet Our Tour Guide</h3>
+                <h2 class="guide-title">Experience Travel Guide</h2>
+            </div>
+
+            <div class="guides-grid">
+                <!-- Guide 1 -->
+                <div class="guide-card">
+                    <div class="guide-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
+                            alt="Michael J. Hawthorne">
+                    </div>
+                    <div class="guide-info">
+                        <h4 class="guide-name">Michael J. Hawthorne</h4>
+                        <p class="guide-role">CEO & Senior Guide</p>
+                        <div class="guide-expand">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 2 -->
+                <div class="guide-card">
+                    <div class="guide-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop"
+                            alt="Timothy E. Redondo">
+                    </div>
+                    <div class="guide-info">
+                        <h4 class="guide-name">Timothy E. Redondo</h4>
+                        <p class="guide-role">Senior Guide</p>
+                        <div class="guide-expand">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 3 -->
+                <div class="guide-card">
+                    <div class="guide-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop"
+                            alt="William W. McNichols">
+                    </div>
+                    <div class="guide-info">
+                        <h4 class="guide-name">William W. McNichols</h4>
+                        <p class="guide-role">Junior Guide</p>
+                        <div class="guide-expand">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 4 -->
+                <div class="guide-card">
+                    <div class="guide-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop"
+                            alt="Samuel G. Lenahan">
+                    </div>
+                    <div class="guide-info">
+                        <h4 class="guide-name">Samuel G. Lenahan</h4>
+                        <p class="guide-role">Travel Guide</p>
+                        <div class="guide-expand">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Clients Testimonials</span>
+                <h2>Real Stories, Real Adventures</h2>
+            </div>
+
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+
+                    <!-- SLIDE 1 -->
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" />
+                        <p>“Even when we had a small hiccup, the support team handled it immediately.”</p>
+                        <h4>Michael S. Heslin</h4>
+                        <span>Businessman</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" />
+                        <p>“Everything was perfectly arranged. One of the smoothest trips ever.”</p>
+                        <h4>Daniel Roberts</h4>
+                        <span>Traveler</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12" />
+                        <p>“Amazing value and well-planned destinations. Highly recommend!”</p>
+                        <h4>Sarah Willson</h4>
+                        <span>Photographer</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+
+                    <!-- ===== DUPLICATES (MANDATORY) ===== -->
+
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" />
+                        <p>“Even when we had a small hiccup, the support team handled it immediately.”</p>
+                        <h4>Michael S. Heslin</h4>
+                        <span>Businessman</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" />
+                        <p>“Everything was perfectly arranged. One of the smoothest trips ever.”</p>
+                        <h4>Daniel Roberts</h4>
+                        <span>Traveler</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12" />
+                        <p>“Amazing value and well-planned destinations. Highly recommend!”</p>
+                        <h4>Sarah Willson</h4>
+                        <span>Photographer</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready for Your Next adventure?<br>Get Started your tours!</h2>
+                <p class="cta-subtitle">More then <span class="cta-badge">10,300+</span> most popular destinations
+                    package</p>
+                <button class="btn-booking">Booking Tours <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="#" class="footer-logo"><i class="fas fa-suitcase-rolling brand-icon"></i>Tripex</a>
+                    <p class="footer-description">We take care of every detail you can travel with confidence ease.</p>
+                    <div class="footer-contact">
+                        <i class="fas fa-headset"></i>
+                        <div>
+                            <p style="font-size: 0.85rem; color: #b0b0b0; margin-bottom: 0.3rem;">Need help? Call us</p>
+                            <a href="tel:12345869888" class="contact-number">1(234)-5869-8888</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Tour Listings</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Tour Activities</a></li>
+                        <li><a href="#">Tour Types</a></li>
+                        <li><a href="#">How It Work</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4 class="footer-heading">Popular Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Flight Bookings</a></li>
+                        <li><a href="#">Hotel Reservations</a></li>
+                        <li><a href="#">Holiday Packages</a></li>
+                        <li><a href="#">Travel Insurance</a></li>
+                        <li><a href="#">Tour Guide Services</a></li>
+                        <li><a href="#">Visa Assistance</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p style="color: #b0b0b0; margin-bottom: 1rem;">Get every travel news update</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email address" class="newsletter-input">
+                        <button type="submit" class="btn-subscribe">Subscribe <i
+                                class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">©Tripex, All Rights Reserved, Design by <span
+                        class="highlight-text">Pixelfit</span></p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.visibility = 'visible';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.visibility = 'hidden';
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const currentUser = JSON.parse(
+        localStorage.getItem("currentUser")
+    );
+
+    const userBtn = document.getElementById("userBtn");
+
+    if (currentUser && currentUser.name) {
+
+        userBtn.innerHTML =
+            `<i class="fas fa-user-circle me-2"></i>${currentUser.name}`;
+
+    } else {
+
+        userBtn.innerHTML =
+            `<i class="fas fa-user-circle me-2"></i>Guest`;
+
+    }
+
+});
+    </script>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>
